@@ -1,0 +1,25 @@
+.product-container {
+  display: flex;
+  width: 100%;
+
+  nav {
+    width: 15%;
+    background-color: #f0f0f0;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+  }
+
+  .products-left-nav {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .card-wrap {
+    display: flex;
+  }
+}

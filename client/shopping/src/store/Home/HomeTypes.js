@@ -1,0 +1,4 @@
+// Replace with your request types
+export const GET_CATEGORIES_REQUEST = 'GET_CATEGORIES_REQUEST';
+export const GET_BANNERS_REQUEST = 'GET_BANNERS_REQUEST';
+export const GET_DATA_REQUEST_SUCCESS = 'GET_DATA_REQUEST_SUCCESS';

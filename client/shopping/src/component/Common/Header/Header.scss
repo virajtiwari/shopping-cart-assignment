@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 10px 10px -10px #ccc;
+
+  .right-nav {
+    position: relative;
+  }
+
+  .login {
+    position: absolute;
+    left: 0;
+    top: -35px;
+  }
+}
+
+.cart {
+  display: flex;
+  margin-top: 2.3rem;
+  background: #e1dfdf;
+  padding: 12px;
+  width: 100%;
+
+  .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cart-count {
+    margin-left: 1rem;
+  }
+}
