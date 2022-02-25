@@ -1,0 +1,43 @@
+.register-form {
+    display: flex;
+    width: 100%;
+
+    .register-text {
+        flex-direction: column;
+        width: 50%;
+        padding: 2rem 5rem;
+        h2{
+            margin: 1rem 0;
+        }
+    }
+    
+    .email-password {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .register-btn {
+        width: 88%;
+        padding-top: 2rem;
+        button {
+            width: 100%;
+        }
+    }
+
+    .register-right {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+  
+    .register-form{
+        flex-direction: column;
+        .register-text, .register-right {
+            width: 100%;
+            padding-left: 3rem;
+        }
+    }
+    
+  }

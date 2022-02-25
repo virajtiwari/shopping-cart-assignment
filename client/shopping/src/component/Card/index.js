@@ -4,14 +4,10 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import { red } from "@mui/material/colors";
 import Typography from "@mui/material/Typography";
 import Button from "../Button";
 
-export default function RecipeReviewCard({item}) {
-  const handleClickAction = (e) => {
-    console.log("test", e.target.value);
-  };
+export default function RecipeReviewCard({item, handleClickAction}) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>

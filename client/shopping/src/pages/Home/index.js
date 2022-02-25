@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCategoriesRequest, getBannersRequest } from "../../store/Home/HomeAction";
+import { useNavigate } from "react-router-dom";
+import { getCategoriesRequest, getBannersRequest, addSlectedKey } from "../../store/Home/HomeAction";
 import "./Home.scss";
 import SwipeableTextMobileStepper from "../../component/Carousel";
-import { Example } from "../../component/Carousel/CarouselD";
+import Button from '../../component/Button';
 
 export default function Home() {
   const categories = useSelector(state => state?.shopping?.categories);
   const banners = useSelector(state => state?.shopping?.banners);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getBannersRequest());
@@ -18,7 +20,6 @@ export default function Home() {
   return (
     <div className="home">
      {banners && <SwipeableTextMobileStepper carouselItem={banners} />}
-      {/* <Example carouselItem={banners}/> */}
       <div className="item">
         {categories
           ?.filter((k) => k?.imageUrl)
@@ -34,13 +35,15 @@ export default function Home() {
               <div className="item-description">
                 <label>{item?.name}</label>
                 <label>{item?.description}</label>
-                <button
-                  onClick={() => {
+                <Button
+                  handleClickHandler={() => {
                     console.log("clicked");
+                    dispatch(addSlectedKey(item));
+                    navigate('/products');
                   }}
                 >
                   Explore {item?.key}
-                </button>
+                </Button>
               </div>
             </div>
           ))}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 
 const ButtonTxt = styled(Button)({
   boxShadow: 'none',
@@ -24,9 +23,9 @@ const ButtonTxt = styled(Button)({
   }
 });
 
-export default function CustomizedButtons({handleClickHandler, children}) {
+export default function CustomizedButtons({handleClickHandler, children, disabled}) {
   return (
-      <ButtonTxt variant="contained" onClick={handleClickHandler}>
+      <ButtonTxt disabled={disabled || false} variant="contained" onClick={handleClickHandler}>
         {children}
       </ButtonTxt>
   );

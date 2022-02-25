@@ -7,6 +7,15 @@
 
   .right-nav {
     position: relative;
+    .cart-item-checkout {
+      position: absolute;
+      right: 0;
+      top: 6rem;
+      min-width: 437px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      z-index: 1;
+    }
   }
 
   .login {
@@ -22,6 +31,7 @@
   background: #e1dfdf;
   padding: 12px;
   width: 100%;
+  cursor: pointer;
 
   .cart-icon {
     width: 30px;
@@ -31,4 +41,6 @@
   .cart-count {
     margin-left: 1rem;
   }
+
+  
 }
